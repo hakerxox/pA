@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="ar">
+
+<!-- Mirrored from medical.alsehha.gov.sa/check by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 07 Oct 2022 07:28:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="M5WTxQU4dk0k72gxL4bg5qa4gFpKTzVtxwiNwrJS">
+    <title> التحقق من حالة الطلب - التقارير الطبية</title>
+
+
+    <link rel="shortcut icon" href="images/favicon-16x16.png">
+
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/bootstrap-rtl.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/ck-theme-dark.css" rel="stylesheet" />
+    <link href="css/ck-language-arabic.css" rel="stylesheet" />
+    <style>
+        #loader {
+            border: 12px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 12px solid #444444;
+            width: 70px;
+            height: 70px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes  spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .center {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+    </style>
+
+        <link href="css/sweetalert2.css" rel="stylesheet" />
+    <link href="css/timeline.css" rel="stylesheet" />
+</head>
+<body class="page">
+
+
+
+<div class="container">
+    <section class="main">
+        <div class="form-2">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="index.html">
+                            <img alt="" src="images/logo-light.png" class="img-responsive">
+                        </a>
+                    </div>
+                    <div class="navbar-header pull-right clearfix collapse navbar-collapse">
+                        <a class="navbar-brand" href="index.html">
+                            <img alt="" src="images/medical-records.png" width="120">
+                        </a>
+                    </div>
+                        <div class="collapse navbar-collapse text-center">
+        <h1>
+            التحقق من حالة الطلب
+            <i class="fa fa-search text-success" aria-hidden="true"></i>
+        </h1>
+    </div>
+                </div>
+            </nav>
+                <form class="form-horizontal" action="https://medical.alsehha.gov.sa/check" method="post" id="check-form">
+        <input type="hidden" name="_token" value="M5WTxQU4dk0k72gxL4bg5qa4gFpKTzVtxwiNwrJS">        <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    بيــــانات الطلب
+                </h3>
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <label for="app_number" class="control-label col-md-2">رقم الطلب</label>
+                    <div class="col-md-4">
+                        <input id="app_number" name="app_number" value=""  class="form-control" type="text" maxlength="11">
+                                            </div>
+                    <label for="id_number" class="control-label col-md-2">رقم هوية(المريض)</label>
+                    <div class="col-md-4">
+                        <input id="id_number" name="id_number" value=""  class="form-control" type="text" maxlength="10">
+                                            </div>
+                </div>
+            </div>
+        </div>
+        <div id="result" hidden>
+            <div class="main-timeline">
+                <div id="st1" class="timeline">
+                    <div class="timeline-content">
+                        <h3 class="title"> <span id="app_date" class="res"></span> <i class="fa fa-pencil"></i></h3>
+                        <p class="description"></p>
+                            <ul>
+                                <li>
+                                    رقم الطلب: <span id="app_num" class="res"></span>
+                                </li>
+                                <li>
+                                    الاســــــــــم: <span id="name" class="res"></span>
+                                </li>
+                                <li>
+                                    رقم الهوية: <span id="id_num" class="res"></span>
+                                </li>
+                        </ul>
+                    </div>
+                </div>
+                <div id="st2" class="timeline">
+                    <div class="timeline-content">
+                        <h3 class="title"><span id="response" class="res"></span> <i class="fa fa-clock-o"></i></h3>
+                        <p class="description">
+                            <span id="status" class="res"></span>
+                        </p>
+                    </div>
+                </div>
+                <div id="st3" class="timeline">
+                    <div class="timeline-content">
+                        <h3 class="title"><span id="done" class="res"> </span><i class="fa fa-check"></i></h3>
+                        <p class="description">
+                            <span id="message" class="res"></span>
+                        </p>
+                    </div>
+                </div>
+                <div id="st4" class="timeline">
+                    <div class="timeline-content">
+                        <h3 class="title"><span id="receive" class="res"> </span><i class="fa fa-file-text"></i></h3>
+                        <p class="description">
+                            <span id="message2" class="res"></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="form-group">
+            <div class="col-sm-offset-4 col-sm-4">
+                <button id="ajax_button" class="btn btn-primary btn-lg pull-right btn-block" type="submit">
+                    <i class="fa fa-paper-plane-o"></i>
+                    إرســـــال
+                    <i id="spin"></i>
+                </button>
+            </div>
+        </div>
+
+    </form>
+        </div>​​
+    </section>
+</div>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/additional-methods.min.js"></script>
+<script src="js/validation_messages_ar.js"></script>
+<script src="js/jquery.blockui.min.js"></script>
+<script src="js/chk.min.js"></script>
+<script type="text/javascript">
+    Offline.options = {
+        checks: {xhr: {url: 'https://medical.alsehha.gov.sa/favicon.ico'}},
+        checkOnLoad: false,
+        interceptRequests: true,
+        reconnect: {
+            initialDelay: 3,
+            delay: 10
+        },
+        requests: true
+    };
+    let run = function(){
+        if (Offline.state === 'up')
+            Offline.check();
+    };
+    setInterval(run, 10000);
+</script>
+
+
+
+
+
+
+
+
+
+    <script src="js/sweetalert2.min.js"></script>
+    <script src="js/moment-with-locales.js"></script>
+    <script src="../www.google.com/recaptcha/apif5d4.js?render=6LciZMcUAAAAAFwpTt3AM09rupYrjcdtb7Df7pSb"></script>
+<script>
+    function getRecaptcha() {
+        grecaptcha.ready(function () {
+        grecaptcha.execute('6LciZMcUAAAAAFwpTt3AM09rupYrjcdtb7Df7pSb', { action: 'check' }).then(function (token) {
+            var recaptchaResponse = document.getElementById('recaptchaResponse');
+            recaptchaResponse.value = token;
+        });
+    });
+
+    }
+    getRecaptcha();
+</script>
+    <script src="js/check.js"></script>
+</body>
+
+<!-- Mirrored from medical.alsehha.gov.sa/check by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 07 Oct 2022 07:28:49 GMT -->
+</html>

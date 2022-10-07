@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="ar">
+
+<!-- Mirrored from medical.alsehha.gov.sa/create by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 07 Oct 2022 07:28:40 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="M5WTxQU4dk0k72gxL4bg5qa4gFpKTzVtxwiNwrJS">
+    <title> طلب جديد - التقارير الطبية</title>
+
+
+    <link rel="shortcut icon" href="images/favicon-16x16.png">
+
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <link href="css/bootstrap-rtl.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/ck-theme-dark.css" rel="stylesheet" />
+    <link href="css/ck-language-arabic.css" rel="stylesheet" />
+    <style>
+        #loader {
+            border: 12px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 12px solid #444444;
+            width: 70px;
+            height: 70px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes  spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .center {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+    </style>
+
+        <link href="css/jquery.calendars.picker.css" rel="stylesheet" />
+    <link href="css/select2.css" rel="stylesheet" />
+    <link href="css/select2-bootstrap.css" rel="stylesheet" />
+    <link href="css/sweetalert2.css" rel="stylesheet" />
+</head>
+<body class="page">
+
+
+
+<div class="container">
+    <section class="main">
+        <div class="form-2">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="index.html">
+                            <img alt="" src="images/logo-light.png" class="img-responsive">
+                        </a>
+                    </div>
+                    <div class="navbar-header pull-right clearfix collapse navbar-collapse">
+                        <a class="navbar-brand" href="index.html">
+                            <img alt="" src="images/medical-records.png" width="120">
+                        </a>
+                    </div>
+					<div class="hidden-xs hidden-sm text-center ">
+        <h2>
+            مستشفى الامير سلطان للقوات المسلحة بالمدينة المنورة
+            <i class="" aria-hidden="true"></i>
+        
+                        <div class="hidden-xs hidden-sm text-center ">
+        
+	
+        
+            طلب تقرير طبي
+            <i class="fa fa-stethoscope text-success" aria-hidden="true"></i>
+        </h1>
+    </div>
+                </div>
+            </nav>
+                <form class="form-horizontal" id="form" method="post" action="https://medical.alsehha.gov.sa/app" autocomplete="off">
+        <input type="hidden" name="_token" value="M5WTxQU4dk0k72gxL4bg5qa4gFpKTzVtxwiNwrJS">        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    بيـــانات المريــــض
+                </h3>
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <label for="name_ar" class="control-label col-sm-2 col-md-2">الاسم (عربي)</label>
+                    <div class="col-sm-2 col-md-2">
+                        <input id="name_ar" name="name_ar" value="" class="form-control" type="text" maxlength="12" placeholder="الأول">
+                                            </div>
+                    <div class="col-sm-2 col-md-2">
+                        <input id="father_name" name="father_name" value="" class="form-control" type="text" maxlength="12" placeholder="الأب">
+                                            </div>
+                    <div class="col-sm-2 col-md-2">
+                        <input id="grand_name" name="grand_name" value="" class="form-control" type="text" maxlength="13" placeholder="الجد">
+                                            </div>
+                    <div class="col-sm-2 col-md-2">
+                        <input id="family_name" name="family_name" value="" class="form-control" type="text" maxlength="13" placeholder="العائلة">
+                                            </div>
+                </div>
+                <div class="form-group">
+                    <label for="name_en" class="control-label col-sm-2 col-md-2">الاسم (إنجليزي)</label>
+                    <div class="col-sm-2 col-md-2">
+                        <input id="name_en" name="name_en" value=""  class="form-control" type="text" maxlength="12" placeholder="الأول">
+                                            </div>
+                    <div class="col-sm-2 col-md-2">
+                        <input id="father_name_en" name="father_name_en" value="" class="form-control" type="text" maxlength="12" placeholder="الأب">
+                    </div>
+                    <div class="col-sm-2 col-md-2">
+                        <input id="grand_name_en" name="grand_name_en" value="" class="form-control" type="text" maxlength="13" placeholder="الجد">
+                    </div>
+                    <div class="col-sm-2 col-md-2">
+                        <input id="family_name_en" name="family_name_en" value="" class="form-control" type="text" maxlength="13" placeholder="العائلة">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="id_number" class="control-label col-sm-2 col-md-2">رقم الهوية</label>
+                    <div class="col-sm-4 col-md-4">
+                        <input id="id_number" name="id_number" value=""  class="form-control" type="text" maxlength="10">
+                                            </div>
+                    <label for="birth_date_g" class="control-label col-sm-2 col-md-2">تاريخ الميلاد</label>
+                    <div class="col-sm-2 col-md-2">
+                        <input id="birth_date_g" name="birth_date_g" value="" class="form-control" type="text" readonly>
+                                            </div>
+                    <div class="col-sm-2 col-md-2">
+                        <input id="birth_date_h" name="birth_date_h" value="" class="form-control" type="text" readonly>
+                                            </div>
+                
+                        
+                                                    </select>
+                                            </div>
+                    <label for="department_id" class="control-label col-sm-2 col-md-2">القســــم</label>
+                    <div class="col-sm-4 col-md-4">
+                        <select id="department_id" name="department_id" class="form-control select2">
+                            <option value="">----- أختر -----</option>
+							<option value="11" >قسم الباطنية</option>
+                                                            <option value="12" >قسم الجراحة</option>
+                                                            <option value="13" >قسم النساء والولادة</option>
+                                                            <option value="14" >قسم الاطفال</option>
+                                                            <option value="15" >قسم النفسية</option>
+                                                            <option value="16" >قسم الصدرية</option>
+                                                            <option value="17" >قسم طب الاسرة</option>
+                                                            
+                        </select>
+                                           </div>
+                </div>
+                <div class="form-group">
+                    <label for="file_number" class="control-label col-sm-2 col-md-2">رقم الملف الطبي</label>
+                    <div class="col-sm-4 col-md-4">
+                        <input id="file_number" name="file_number" value=""  class="form-control" type="text" maxlength="10">
+                                            </div>
+                    <label for="physician" class="control-label col-sm-2 col-md-2">الطبيب المعالج</label>
+                    <div class="col-sm-4 col-md-4">
+                        <input id="physician" name="physician" value=""  class="form-control" type="text" maxlength="50">
+                                            </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    بيــــانات مقدم الطلب
+                </h3>
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <label for="provider_name" class="control-label col-sm-2 col-md-2">الاســـــم</label>
+                    <div class="col-sm-4 col-md-4">
+                        <input id="provider_name" name="provider_name" value=""  class="form-control" type="text" >
+                                            </div>
+                    <label for="provider_id_number" class="control-label col-sm-2 col-md-2">رقم الهوية</label>
+                    <div class="col-sm-4 col-md-4">
+                        <input id="provider_id_number" name="provider_id_number" value=""  class="form-control" type="text" maxlength="10">
+                        
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="relationship_id" class="control-label col-sm-2 col-md-2">صفتـــه</label>
+                    <div class="col-sm-4 col-md-4">
+                        <select id="relationship_id" name="relationship_id"  class="form-control select2" >
+                            <option value="">---- أختر ----</option>
+                                                            <option value="1" >نفسه</option>
+                                                            <option value="4" >أب</option>
+                                                            <option value="5" >أم</option>
+                                                            <option value="6" >أبن</option>
+                                                            <option value="7" >أبنة</option>
+                                                            <option value="8" >أخ</option>
+                                                            <option value="9" >أخت</option>
+                                                    </select>
+                                            </div>
+                    <label for="mobile" class="control-label col-sm-2 col-md-2">رقم الجوال</label>
+                    <div class="col-sm-4 col-md-4">
+                        <input id="mobile" name="mobile" value="" placeholder="********05" class="form-control" type="text" maxlength="10">
+                                            </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">
+                    نوع التقرير
+                </h3>
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <label for="patient_type_id" class="control-label col-sm-2 col-md-2">فئة المريض</label>
+                    <div class="col-sm-6 col-md-4">
+                        <select id="patient_type_id" name="patient_type_id"  class="form-control select2" >
+                            <option value="">---- أختر ----</option>
+                                                            <option value="1" >مرضى منومين</option>
+                                                            <option value="2" >مرضى عيادات خارجية</option>
+                                                            <option value="3" >اخرى</option>
+                                                    </select>
+                                            </div>
+                    <div id="patient_other" hidden>
+                        <label for="patient_type_other" class="control-label col-sm-2 col-md-2">أذكر الفئة</label>
+                        <div class="col-sm-6 col-md-4">
+                            <input id="patient_type_other" name="patient_type_other" value=""  class="form-control" type="text" >
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="report_type_id" class="control-label col-sm-2 col-md-2">التقرير المطلوب</label>
+                    <div class="col-sm-6 col-md-4">
+                        <select id="report_type_id" name="report_type_id"  class="form-control select2" >
+                            <option value="">---- أختر ----</option>
+                                                            <option value="1" >تقرير طبي (باللغة الإنجليزية فقط)</option>
+                                                            <option value="2" >تقرير طبي (باللغة العربية )</option>
+                                                            <option value="4" >اخرى</option>
+                                                    </select>
+                                            </div>
+                    <div id="report_other" hidden>
+                        <label for="report_type_other" class="control-label col-sm-2 col-md-2">أذكر التقرير</label>
+                        <div class="col-sm-6 col-md-4">
+                            <input id="report_type_other" name="report_type_other" value=""  class="form-control" type="text" >
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="report_purpose_id" class="control-label col-sm-2 col-md-2">الغرض من التقرير</label>
+                    <div class="col-sm-6 col-md-4">
+                        <select id="report_purpose_id" name="report_purpose_id"  class="form-control select2" >
+                            <option value="">---- أختر ----</option>
+                                                            <option value="1" >عـــــلاج</option>
+                                                            <option value="2" >شخصي</option>
+                                                            <option value="3" >تقديم لجهة</option>
+                                                            <option value="4" >اخرى</option>
+                                                    </select>
+                                            </div>
+                </div>
+                <div class="form-group">
+                    <label for="purpose_details" class="control-label col-sm-2 col-md-2">السبب</label>
+                    <div class="col-sm-6 col-md-4">
+                        <textarea name="purpose_details" id="purpose_details" class="form-control" maxlength="500"></textarea>
+                                            </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-4 col-sm-4">
+                <div class="captcha">
+                    <span><img src="captcha/flatc45b.png?uTTfsy2s" ></span>
+                    <button type="button" class="btn btn-primary  btn-refresh">
+                        <i class="fa fa-refresh"></i>
+                    </button>
+                </div>
+                <input id="captcha" type="text" class="form-control" placeholder="أدخل الكود الموجود بالصورة" name="captcha">
+                            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-4 col-sm-4">
+                <button id="ajax_button" class="btn btn-primary btn-lg pull-right btn-block" type="submit">
+                    <i class="fa fa-paper-plane-o"></i>
+                    إرســـــال
+                    <i id="spin"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+    <div id="myModal" class="modal fade" >
+        <div class="modal-dialog modal-lg">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title text-warning">
+                        <i class="fa fa-warning"></i>
+                        تنبيــــــــه
+                    </h4>
+                </div>
+                <div class="modal-body">
+                        <ul class="list-group">
+                            <li class="list-group-item list-group-item-info">
+                                <i class="fa fa-check-circle"></i>
+                                التقارير الطبية باللغة العربية وأي تقارير تتعلق بالإجازات المرضية يتم اصدارها بخطاب من جهة حكومية رسمية.
+                            </li>
+                            <li class="list-group-item list-group-item-info">
+                                <i class="fa fa-check-circle"></i>
+                                لن يسلم التقرير المطلوب إلا لصاحب الطلب أو ذويه مع إحضار ما يثبت ذلك.
+                            </li>
+                            <li class="list-group-item list-group-item-info">
+                                <i class="fa fa-check-circle"></i>
+                                يرجى إدخال البيانات المطلوبة بطريقة صحيحة مع الإحتفاظ برقم الطلب للمراجعة
+                            </li>
+                            <li class="list-group-item list-group-item-info">
+                                <i class="fa fa-check-circle"></i>
+                                بعد الإنتهاء من تجهيز التقرير ستصلك رسالة نصية (يرجى التوجه لقسم التقارير الطبية لإستلام التقرير)
+                            </li>
+                            <li class="list-group-item list-group-item-info">
+                                <i class="fa fa-check-circle"></i>
+                                في حالة رفض الطلب يرجى التوجه لهذا الرابط <a href="check.html" class="text-danger">(إضغط هنـــــا)</a>
+                                لمعرفة سبب الرفض
+                            </li>
+                        </ul>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">إغــــلاق</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+        </div>​​
+    </section>
+</div>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/additional-methods.min.js"></script>
+<script src="js/validation_messages_ar.js"></script>
+<script src="js/jquery.blockui.min.js"></script>
+<script src="js/chk.min.js"></script>
+<script type="text/javascript">
+    Offline.options = {
+        checks: {xhr: {url: 'https://medical.alsehha.gov.sa/favicon.ico'}},
+        checkOnLoad: false,
+        interceptRequests: true,
+        reconnect: {
+            initialDelay: 3,
+            delay: 10
+        },
+        requests: true
+    };
+    let run = function(){
+        if (Offline.state === 'up')
+            Offline.check();
+    };
+    setInterval(run, 10000);
+</script>
+
+
+
+
+
+
+
+
+
+    <script src="js/select2.min.js"></script>
+    <script src="js/select2_ar.js"></script>
+    <script src="js/sweetalert2.min.js"></script>
+    <script src="js/calendar/jquery.plugin.min.js"></script>
+    <script src="js/calendar/jquery.calendars.min.js"></script>
+    <script src="js/calendar/jquery.calendars.plus.min.js"></script>
+    <script src="js/calendar/jquery.calendars.picker.min.js"></script>
+    <script src="js/calendar/jquery.calendars.picker-ar.js"></script>
+    <script src="js/calendar/jquery.calendars-ar-EG.js"></script>
+    <script src="js/calendar/jquery.calendars.ummalqura.min.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/script.js"></script>
+    <script type="text/javascript">
+        $(window).on('load',function(){
+            $('#myModal').modal('show');
+        });
+    </script>
+</body>
+
+<!-- Mirrored from medical.alsehha.gov.sa/create by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 07 Oct 2022 07:28:47 GMT -->
+</html>
